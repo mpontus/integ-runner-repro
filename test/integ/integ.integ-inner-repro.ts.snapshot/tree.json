@@ -8,17 +8,17 @@
         "id": "IntegRunnerReproStack",
         "path": "IntegRunnerReproStack",
         "children": {
-          "Handler": {
-            "id": "Handler",
-            "path": "IntegRunnerReproStack/Handler",
+          "RunAllTests": {
+            "id": "RunAllTests",
+            "path": "IntegRunnerReproStack/RunAllTests",
             "children": {
               "ServiceRole": {
                 "id": "ServiceRole",
-                "path": "IntegRunnerReproStack/Handler/ServiceRole",
+                "path": "IntegRunnerReproStack/RunAllTests/ServiceRole",
                 "children": {
                   "ImportServiceRole": {
                     "id": "ImportServiceRole",
-                    "path": "IntegRunnerReproStack/Handler/ServiceRole/ImportServiceRole",
+                    "path": "IntegRunnerReproStack/RunAllTests/ServiceRole/ImportServiceRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.63.1"
@@ -26,7 +26,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "IntegRunnerReproStack/Handler/ServiceRole/Resource",
+                    "path": "IntegRunnerReproStack/RunAllTests/ServiceRole/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                       "aws:cdk:cloudformation:props": {
@@ -71,11 +71,11 @@
               },
               "Code": {
                 "id": "Code",
-                "path": "IntegRunnerReproStack/Handler/Code",
+                "path": "IntegRunnerReproStack/RunAllTests/Code",
                 "children": {
                   "Stage": {
                     "id": "Stage",
-                    "path": "IntegRunnerReproStack/Handler/Code/Stage",
+                    "path": "IntegRunnerReproStack/RunAllTests/Code/Stage",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.AssetStaging",
                       "version": "2.63.1"
@@ -83,7 +83,7 @@
                   },
                   "AssetBucket": {
                     "id": "AssetBucket",
-                    "path": "IntegRunnerReproStack/Handler/Code/AssetBucket",
+                    "path": "IntegRunnerReproStack/RunAllTests/Code/AssetBucket",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                       "version": "2.63.1"
@@ -97,7 +97,7 @@
               },
               "Resource": {
                 "id": "Resource",
-                "path": "IntegRunnerReproStack/Handler/Resource",
+                "path": "IntegRunnerReproStack/RunAllTests/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                   "aws:cdk:cloudformation:props": {
@@ -105,11 +105,11 @@
                       "s3Bucket": {
                         "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
                       },
-                      "s3Key": "e4abce3b5a4f3e057596b5f00bfbc28f97dc58381014464e84dcb0d8f96ce0fd.zip"
+                      "s3Key": "4a1f524a9b14a75b9f0106a175b996feda1e748d38b63576dd69128b4e24a2df.zip"
                     },
                     "role": {
                       "Fn::GetAtt": [
-                        "HandlerServiceRoleFCDC14AE",
+                        "RunAllTestsServiceRoleD9C2A0B2",
                         "Arn"
                       ]
                     },
@@ -137,9 +137,9 @@
             "id": "Exports",
             "path": "IntegRunnerReproStack/Exports",
             "children": {
-              "Output{\"Ref\":\"Handler886CB40B\"}": {
-                "id": "Output{\"Ref\":\"Handler886CB40B\"}",
-                "path": "IntegRunnerReproStack/Exports/Output{\"Ref\":\"Handler886CB40B\"}",
+              "Output{\"Ref\":\"RunAllTests5657B35C\"}": {
+                "id": "Output{\"Ref\":\"RunAllTests5657B35C\"}",
+                "path": "IntegRunnerReproStack/Exports/Output{\"Ref\":\"RunAllTests5657B35C\"}",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnOutput",
                   "version": "2.63.1"
@@ -193,17 +193,17 @@
                 "id": "DeployAssert",
                 "path": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert",
                 "children": {
-                  "LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5": {
-                    "id": "LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5",
-                    "path": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5",
+                  "LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710": {
+                    "id": "LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710",
+                    "path": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710",
                     "children": {
                       "SdkProvider": {
                         "id": "SdkProvider",
-                        "path": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5/SdkProvider",
+                        "path": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710/SdkProvider",
                         "children": {
                           "AssertionsProvider": {
                             "id": "AssertionsProvider",
-                            "path": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5/SdkProvider/AssertionsProvider",
+                            "path": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710/SdkProvider/AssertionsProvider",
                             "constructInfo": {
                               "fqn": "constructs.Construct",
                               "version": "10.1.240"
@@ -217,11 +217,11 @@
                       },
                       "Default": {
                         "id": "Default",
-                        "path": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5/Default",
+                        "path": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710/Default",
                         "children": {
                           "Default": {
                             "id": "Default",
-                            "path": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5/Default/Default",
+                            "path": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710/Default/Default",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.CfnResource",
                               "version": "2.63.1"
@@ -235,7 +235,7 @@
                       },
                       "Invoke": {
                         "id": "Invoke",
-                        "path": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5/Invoke",
+                        "path": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710/Invoke",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CfnResource",
                           "version": "2.63.1"
@@ -243,7 +243,7 @@
                       },
                       "AssertionResults": {
                         "id": "AssertionResults",
-                        "path": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5/AssertionResults",
+                        "path": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710/AssertionResults",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CfnOutput",
                           "version": "2.63.1"

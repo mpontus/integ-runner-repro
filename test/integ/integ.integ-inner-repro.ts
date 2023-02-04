@@ -1,14 +1,18 @@
 import { ExpectedResult, IntegTest } from "@aws-cdk/integ-tests-alpha";
-import { App } from "aws-cdk-lib";
-import { IntegRunnerReproStack } from "../../lib/integ-runner-repro-stack";
+import { App, Stack } from "aws-cdk-lib";
+import { NodejsFunction } from "aws-cdk-lib/aws-lambda-nodejs";
 
 const app = new App();
-const stack = new IntegRunnerReproStack(app, "IntegRunnerReproStack");
+const stack = new Stack(app, "IntegRunnerReproStack");
+const handler = new NodejsFunction(stack, "RunAllTests", {
+  entry: `${__dirname}/handlers.ts`,
+  handler: "handler",
+});
 const integ = new IntegTest(app, "IntegRunnerReproIntegTest", {
   testCases: [stack],
 });
 const invoke = integ.assertions.invokeFunction({
-  functionName: stack.handler.functionName,
+  functionName: handler.functionName,
 });
 invoke.expect(
   ExpectedResult.objectLike({

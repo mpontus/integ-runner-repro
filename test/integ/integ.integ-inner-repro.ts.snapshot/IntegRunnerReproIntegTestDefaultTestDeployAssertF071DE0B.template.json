@@ -1,6 +1,6 @@
 {
  "Resources": {
-  "LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5": {
+  "LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710": {
    "Type": "Custom::DeployAssert@SdkCallLambdainvoke",
    "Properties": {
     "ServiceToken": {
@@ -14,21 +14,21 @@
     "expected": "{\"$ObjectLike\":{\"StatusCode\":200,\"Payload\":\"null\"}}",
     "parameters": {
      "FunctionName": {
-      "Fn::ImportValue": "IntegRunnerReproStack:ExportsOutputRefHandler886CB40BD176DC16"
+      "Fn::ImportValue": "IntegRunnerReproStack:ExportsOutputRefRunAllTests5657B35CF096BC6B"
      }
     },
     "flattenResponse": "false",
-    "salt": "1675542110646"
+    "salt": "1675544755927"
    },
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete"
   },
-  "LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5Invoke30065BC0": {
+  "LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710Invoke89D4F8EB": {
    "Type": "AWS::Lambda::Permission",
    "Properties": {
     "Action": "lambda:InvokeFunction",
     "FunctionName": {
-     "Fn::ImportValue": "IntegRunnerReproStack:ExportsOutputRefHandler886CB40BD176DC16"
+     "Fn::ImportValue": "IntegRunnerReproStack:ExportsOutputRefRunAllTests5657B35CF096BC6B"
     },
     "Principal": {
      "Fn::GetAtt": [
@@ -97,7 +97,7 @@
              },
              ":function:",
              {
-              "Fn::ImportValue": "IntegRunnerReproStack:ExportsOutputRefHandler886CB40BD176DC16"
+              "Fn::ImportValue": "IntegRunnerReproStack:ExportsOutputRefRunAllTests5657B35CF096BC6B"
              }
             ]
            ]
@@ -132,10 +132,10 @@
   }
  },
  "Outputs": {
-  "AssertionResultsLambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5": {
+  "AssertionResultsLambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710": {
    "Value": {
     "Fn::GetAtt": [
-     "LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5",
+     "LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710",
      "assertion"
     ]
    }
