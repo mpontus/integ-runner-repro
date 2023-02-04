@@ -1,0 +1,12 @@
+{
+  "version": "29.0.0",
+  "testCases": {
+    "IntegRunnerReproIntegTest/DefaultTest": {
+      "stacks": [
+        "IntegRunnerReproStack"
+      ],
+      "assertionStack": "IntegRunnerReproIntegTest/DefaultTest/DeployAssert",
+      "assertionStackName": "IntegRunnerReproIntegTestDefaultTestDeployAssertF071DE0B"
+    }
+  }
+}
