@@ -1,6 +1,6 @@
 {
  "Resources": {
-  "HandlerServiceRoleFCDC14AE": {
+  "RunAllTestsServiceRoleD9C2A0B2": {
    "Type": "AWS::IAM::Role",
    "Properties": {
     "AssumeRolePolicyDocument": {
@@ -31,18 +31,18 @@
     ]
    }
   },
-  "Handler886CB40B": {
+  "RunAllTests5657B35C": {
    "Type": "AWS::Lambda::Function",
    "Properties": {
     "Code": {
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "e4abce3b5a4f3e057596b5f00bfbc28f97dc58381014464e84dcb0d8f96ce0fd.zip"
+     "S3Key": "820b95de44fe7b65478ef7b1d5363f22f30140703e974c87eb3fff084d7abb97.zip"
     },
     "Role": {
      "Fn::GetAtt": [
-      "HandlerServiceRoleFCDC14AE",
+      "RunAllTestsServiceRoleD9C2A0B2",
       "Arn"
      ]
     },
@@ -55,17 +55,17 @@
     "Runtime": "nodejs14.x"
    },
    "DependsOn": [
-    "HandlerServiceRoleFCDC14AE"
+    "RunAllTestsServiceRoleD9C2A0B2"
    ]
   }
  },
  "Outputs": {
-  "ExportsOutputRefHandler886CB40BD176DC16": {
+  "ExportsOutputRefRunAllTests5657B35CF096BC6B": {
    "Value": {
-    "Ref": "Handler886CB40B"
+    "Ref": "RunAllTests5657B35C"
    },
    "Export": {
-    "Name": "IntegRunnerReproStack:ExportsOutputRefHandler886CB40BD176DC16"
+    "Name": "IntegRunnerReproStack:ExportsOutputRefRunAllTests5657B35CF096BC6B"
    }
   }
  },
