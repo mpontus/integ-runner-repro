@@ -1,9 +1,9 @@
 import { ExpectedResult, IntegTest } from "@aws-cdk/integ-tests-alpha";
 import { App } from "aws-cdk-lib";
-import { IntegRunnerReproTestStack } from "../../lib/integ-runner-repro/test-stack";
+import { IntegRunnerReproStack } from "../../lib/integ-runner-repro-stack";
 
 const app = new App();
-const stack = new IntegRunnerReproTestStack(app, "IntegRunnerReproStack");
+const stack = new IntegRunnerReproStack(app, "IntegRunnerReproStack");
 const integ = new IntegTest(app, "IntegRunnerReproIntegTest", {
   testCases: [stack],
 });
