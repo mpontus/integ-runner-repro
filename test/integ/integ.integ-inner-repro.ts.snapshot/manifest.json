@@ -17,7 +17,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/8514b424fbe0d585f0a9c32b0b613b1eb5fd65fd05c4e515f001427a6fc53412.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/8678b2f849f061aad81e58503cd986c4593309b89381252da3958b79d525f171.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -33,22 +33,22 @@
         "IntegRunnerReproStack.assets"
       ],
       "metadata": {
-        "/IntegRunnerReproStack/RunAllTests/ServiceRole/Resource": [
+        "/IntegRunnerReproStack/Handler/ServiceRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RunAllTestsServiceRoleD9C2A0B2"
+            "data": "HandlerServiceRoleFCDC14AE"
           }
         ],
-        "/IntegRunnerReproStack/RunAllTests/Resource": [
+        "/IntegRunnerReproStack/Handler/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "RunAllTests5657B35C"
+            "data": "Handler886CB40B"
           }
         ],
-        "/IntegRunnerReproStack/Exports/Output{\"Ref\":\"RunAllTests5657B35C\"}": [
+        "/IntegRunnerReproStack/Exports/Output{\"Ref\":\"Handler886CB40B\"}": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "ExportsOutputRefRunAllTests5657B35CF096BC6B"
+            "data": "ExportsOutputRefHandler886CB40BD176DC16"
           }
         ],
         "/IntegRunnerReproStack/BootstrapVersion": [
@@ -82,7 +82,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/757284907e678d957c9618828c718630d6599584de2329a9313248bc58400202.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/25754036db625ebe49072bcf32bfc3a06eb919810b50bcfa5e0551c8c8f15f08.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -99,22 +99,22 @@
         "IntegRunnerReproIntegTestDefaultTestDeployAssertF071DE0B.assets"
       ],
       "metadata": {
-        "/IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710/Default/Default": [
+        "/IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5/Default/Default": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710"
+            "data": "LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5"
           }
         ],
-        "/IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710/Invoke": [
+        "/IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5/Invoke": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710Invoke89D4F8EB"
+            "data": "LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5Invoke30065BC0"
           }
         ],
-        "/IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710/AssertionResults": [
+        "/IntegRunnerReproIntegTest/DefaultTest/DeployAssert/LambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5/AssertionResults": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "AssertionResultsLambdaInvoke424963eb0a8e8a9a3c4ebb5989f72710"
+            "data": "AssertionResultsLambdaInvoke35ae3a38b93bc81e7b95e90f43eeaec5"
           }
         ],
         "/IntegRunnerReproIntegTest/DefaultTest/DeployAssert/SingletonFunction1488541a7b23466481b69b4408076b81/Role": [
